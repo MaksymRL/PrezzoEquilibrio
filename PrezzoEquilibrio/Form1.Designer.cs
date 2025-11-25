@@ -28,55 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.formsPlot1 = new ScottPlot.WinForms.FormsPlot();
+            this.formsPlot = new ScottPlot.WinForms.FormsPlot();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblEquilibrio = new System.Windows.Forms.Label();
+            this.numOffertaEsponente = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numOffertaCoeff = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numOffertaIntercetta = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numDomandaCoeff = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numDomandaIntercetta = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOffertaEsponente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOffertaCoeff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOffertaIntercetta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDomandaCoeff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDomandaIntercetta)).BeginInit();
             this.SuspendLayout();
             // 
-            // formsPlot1
+            // formsPlot
             // 
-            this.formsPlot1.DisplayScale = 0F;
-            this.formsPlot1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.formsPlot1.Location = new System.Drawing.Point(0, 0);
-            this.formsPlot1.Name = "formsPlot1";
-            this.formsPlot1.Size = new System.Drawing.Size(984, 661);
-            this.formsPlot1.TabIndex = 0;
+            this.formsPlot.DisplayScale = 0F;
+            this.formsPlot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.formsPlot.Location = new System.Drawing.Point(0, 0);
+            this.formsPlot.Name = "formsPlot";
+            this.formsPlot.Size = new System.Drawing.Size(984, 661);
+            this.formsPlot.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.numericUpDown5);
+            this.panel1.Controls.Add(this.lblEquilibrio);
+            this.panel1.Controls.Add(this.numOffertaEsponente);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.numericUpDown4);
+            this.panel1.Controls.Add(this.numOffertaCoeff);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.numericUpDown3);
+            this.panel1.Controls.Add(this.numOffertaIntercetta);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.numericUpDown2);
+            this.panel1.Controls.Add(this.numDomandaCoeff);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.numericUpDown1);
+            this.panel1.Controls.Add(this.numDomandaIntercetta);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -85,6 +85,113 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 661);
             this.panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(23, 364);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 30);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Reset Valori Originali";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lblEquilibrio
+            // 
+            this.lblEquilibrio.AutoSize = true;
+            this.lblEquilibrio.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblEquilibrio.Location = new System.Drawing.Point(20, 320);
+            this.lblEquilibrio.Name = "lblEquilibrio";
+            this.lblEquilibrio.Size = new System.Drawing.Size(172, 16);
+            this.lblEquilibrio.TabIndex = 13;
+            this.lblEquilibrio.Text = "Equilibrio: Calcolando...";
+            // 
+            // numOffertaEsponente
+            // 
+            this.numOffertaEsponente.Location = new System.Drawing.Point(120, 260);
+            this.numOffertaEsponente.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numOffertaEsponente.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numOffertaEsponente.Name = "numOffertaEsponente";
+            this.numOffertaEsponente.Size = new System.Drawing.Size(80, 20);
+            this.numOffertaEsponente.TabIndex = 12;
+            this.numOffertaEsponente.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(24, 260);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(97, 16);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Esponente (e):";
+            // 
+            // numOffertaCoeff
+            // 
+            this.numOffertaCoeff.DecimalPlaces = 4;
+            this.numOffertaCoeff.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.numOffertaCoeff.Location = new System.Drawing.Point(120, 230);
+            this.numOffertaCoeff.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numOffertaCoeff.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            196608});
+            this.numOffertaCoeff.Name = "numOffertaCoeff";
+            this.numOffertaCoeff.Size = new System.Drawing.Size(80, 20);
+            this.numOffertaCoeff.TabIndex = 10;
+            this.numOffertaCoeff.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(13, 230);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 16);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Coefficiente (d):";
+            // 
+            // numOffertaIntercetta
+            // 
+            this.numOffertaIntercetta.DecimalPlaces = 2;
+            this.numOffertaIntercetta.Location = new System.Drawing.Point(120, 200);
+            this.numOffertaIntercetta.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.numOffertaIntercetta.Name = "numOffertaIntercetta";
+            this.numOffertaIntercetta.Size = new System.Drawing.Size(80, 20);
+            this.numOffertaIntercetta.TabIndex = 8;
+            this.numOffertaIntercetta.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // label6
             // 
@@ -106,29 +213,29 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "OFFERTA: o = c + d·q^e";
             // 
-            // numericUpDown2
+            // numDomandaCoeff
             // 
-            this.numericUpDown2.DecimalPlaces = 2;
-            this.numericUpDown2.Increment = new decimal(new int[] {
+            this.numDomandaCoeff.DecimalPlaces = 2;
+            this.numDomandaCoeff.Increment = new decimal(new int[] {
             5,
             0,
             0,
             65536});
-            this.numericUpDown2.Location = new System.Drawing.Point(120, 120);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.numDomandaCoeff.Location = new System.Drawing.Point(120, 120);
+            this.numDomandaCoeff.Maximum = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.numDomandaCoeff.Minimum = new decimal(new int[] {
             20,
             0,
             0,
             -2147483648});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(80, 20);
-            this.numericUpDown2.TabIndex = 5;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.numDomandaCoeff.Name = "numDomandaCoeff";
+            this.numDomandaCoeff.Size = new System.Drawing.Size(80, 20);
+            this.numDomandaCoeff.TabIndex = 5;
+            this.numDomandaCoeff.Value = new decimal(new int[] {
             4,
             0,
             0,
@@ -144,19 +251,19 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Coefficiente (b):";
             // 
-            // numericUpDown1
+            // numDomandaIntercetta
             // 
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Location = new System.Drawing.Point(120, 90);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numDomandaIntercetta.DecimalPlaces = 2;
+            this.numDomandaIntercetta.Location = new System.Drawing.Point(120, 90);
+            this.numDomandaIntercetta.Maximum = new decimal(new int[] {
             200,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(80, 20);
-            this.numericUpDown1.TabIndex = 3;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numDomandaIntercetta.Name = "numDomandaIntercetta";
+            this.numDomandaIntercetta.Size = new System.Drawing.Size(80, 20);
+            this.numDomandaIntercetta.TabIndex = 3;
+            this.numDomandaIntercetta.Value = new decimal(new int[] {
             90,
             0,
             0,
@@ -192,152 +299,45 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "PARAMETRI";
             // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.DecimalPlaces = 2;
-            this.numericUpDown3.Location = new System.Drawing.Point(120, 200);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(80, 20);
-            this.numericUpDown3.TabIndex = 8;
-            this.numericUpDown3.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 230);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 16);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Coefficiente (d):";
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.DecimalPlaces = 4;
-            this.numericUpDown4.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.numericUpDown4.Location = new System.Drawing.Point(120, 230);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDown4.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            196608});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(80, 20);
-            this.numericUpDown4.TabIndex = 10;
-            this.numericUpDown4.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(24, 260);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 16);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Esponente (e):";
-            // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.Location = new System.Drawing.Point(120, 260);
-            this.numericUpDown5.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDown5.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(80, 20);
-            this.numericUpDown5.TabIndex = 12;
-            this.numericUpDown5.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(20, 320);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(172, 16);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Equilibrio: Calcolando...";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(23, 364);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 30);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Reset Valori Originali";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.formsPlot1);
+            this.Controls.Add(this.formsPlot);
             this.Name = "Form1";
             this.Text = "Analisi Prezzo di Equilibrio - Domanda e Offerta";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOffertaEsponente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOffertaCoeff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOffertaIntercetta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDomandaCoeff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDomandaIntercetta)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ScottPlot.WinForms.FormsPlot formsPlot1;
+        private ScottPlot.WinForms.FormsPlot formsPlot;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numDomandaIntercetta;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numDomandaCoeff;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numOffertaIntercetta;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.Label lblEquilibrio;
+        private System.Windows.Forms.NumericUpDown numOffertaEsponente;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown numOffertaCoeff;
         private System.Windows.Forms.Button button1;
     }
 }
