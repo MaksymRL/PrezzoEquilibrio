@@ -85,7 +85,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 661);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -220,7 +219,6 @@
             this.label7.Size = new System.Drawing.Size(107, 16);
             this.label7.TabIndex = 9;
             this.label7.Text = "Coefficiente (d):";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // numericUpDown4
             // 

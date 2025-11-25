@@ -24,19 +24,23 @@ namespace PrezzoEquilibrio
 
         }
 
-        private void AggiornaGrafico()
-        {
 
+        private (bool Trovato, double Quantita, double Prezzo) TrovaEquilibrio( double dInt, double dCoeff, double oInt, double oCoeff, double oExp)
+        {
+           
+            for (double q = 0; q <= 20; q += 0.001)
+            {
+                double domanda = dInt + dCoeff * q;
+                double offerta = oInt + oCoeff * Math.Pow(q, oExp);
+
+               
+                if (Math.Abs(domanda - offerta) < 0.5)
+                {
+                    return (true, q, domanda);
+                }
+            }
+            return (false, 0, 0);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
