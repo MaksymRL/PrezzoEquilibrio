@@ -20,6 +20,13 @@ namespace PrezzoEquilibrio
         public Form1()
         {
             InitializeComponent();
+            dataGridView.Columns.Add("Quantita", "Quantità (q)");
+            dataGridView.Columns.Add("Domanda", "Domanda (d)");
+            dataGridView.Columns.Add("Offerta", "Offerta (o)");
+            dataGridView.Columns.Add("Differenza", "Differenza");
+
+            AggiornaGrafico();
+            AggiornaTabella();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -130,8 +137,95 @@ namespace PrezzoEquilibrio
             }
         }
 
+        private void numDomandaIntercetta_ValueChanged(object sender, EventArgs e)
+        {
+            AggiornaGrafico();
+        }
 
-        
+        private void numDomandaCoeff_ValueChanged(object sender, EventArgs e)
+        {
+            AggiornaGrafico();
+        }
 
+        private void numOffertaIntercetta_ValueChanged(object sender, EventArgs e)
+        {
+            AggiornaGrafico();
+        }
+
+        private void numOffertaCoeff_ValueChanged(object sender, EventArgs e)
+        {
+            AggiornaGrafico();
+        }
+
+        private void numOffertaEsponente_ValueChanged(object sender, EventArgs e)
+        {
+            AggiornaGrafico();
+        }
+
+
+        private void AggiornaTabella()
+        {
+            try
+            {
+                dataGridView.Rows.Clear();
+
+                double domandaIntercetta = (double)numDomandaIntercetta.Value;
+                double domandaCoeff = (double)numDomandaCoeff.Value;
+                double offertaIntercetta = (double)numOffertaIntercetta.Value;
+                double offertaCoeff = (double)numOffertaCoeff.Value;
+                double offertaEsponente = (double)numOffertaEsponente.Value;
+
+                
+                var equilibrio = TrovaEquilibrio(domandaIntercetta, domandaCoeff,
+                                               offertaIntercetta, offertaCoeff, offertaEsponente);
+
+                
+                for (double q = 0; q <= 8; q += 0.5)
+                {
+                    double domanda = domandaIntercetta - domandaCoeff * q;
+                    double offerta = offertaIntercetta + offertaCoeff * Math.Pow(q, offertaEsponente);
+                    double differenza = Math.Abs(domanda - offerta);
+
+                    int rowIndex = dataGridView.Rows.Add(
+                        q.ToString("F1"),
+                        domanda.ToString("F2"),
+                        offerta.ToString("F2"),
+                        differenza.ToString("F2")
+                    );
+
+                    
+                    if (equilibrio.Trovato && Math.Abs(q - equilibrio.Quantita) < 0.25)
+                    {
+                        dataGridView.Rows[rowIndex].DefaultCellStyle.BackColor = Color.LightGreen;
+                        dataGridView.Rows[rowIndex].DefaultCellStyle.Font = new Font(dataGridView.Font, System.Drawing.FontStyle.Bold);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Errore nell'aggiornamento della tabella: {ex.Message}", "Errore");
+            }
+        }
+
+
+        private void button_reset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                numDomandaIntercetta.Value = 90;
+                numDomandaCoeff.Value = 4;
+                numOffertaIntercetta.Value = 10;
+                numOffertaCoeff.Value = 0.01m;
+                numOffertaEsponente.Value = 3;
+
+                AggiornaGrafico();
+                AggiornaTabella();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Errore nel reset: {ex.Message}", "Errore");
+            }
+        }
     }
 }

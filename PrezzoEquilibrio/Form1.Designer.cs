@@ -30,7 +30,7 @@
         {
             this.formsPlot = new ScottPlot.WinForms.FormsPlot();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_reset = new System.Windows.Forms.Button();
             this.lblEquilibrio = new System.Windows.Forms.Label();
             this.numOffertaEsponente = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
@@ -45,12 +45,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numOffertaEsponente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOffertaCoeff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOffertaIntercetta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDomandaCoeff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDomandaIntercetta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // formsPlot
@@ -65,7 +68,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.dataGridView);
+            this.panel1.Controls.Add(this.button_reset);
             this.panel1.Controls.Add(this.lblEquilibrio);
             this.panel1.Controls.Add(this.numOffertaEsponente);
             this.panel1.Controls.Add(this.label8);
@@ -86,20 +91,21 @@
             this.panel1.Size = new System.Drawing.Size(300, 661);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // button_reset
             // 
-            this.button1.Location = new System.Drawing.Point(23, 364);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 30);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Reset Valori Originali";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_reset.Location = new System.Drawing.Point(23, 602);
+            this.button_reset.Name = "button_reset";
+            this.button_reset.Size = new System.Drawing.Size(150, 30);
+            this.button_reset.TabIndex = 14;
+            this.button_reset.Text = "Reset Valori Originali";
+            this.button_reset.UseVisualStyleBackColor = true;
+            this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
             // 
             // lblEquilibrio
             // 
             this.lblEquilibrio.AutoSize = true;
             this.lblEquilibrio.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.lblEquilibrio.Location = new System.Drawing.Point(20, 320);
+            this.lblEquilibrio.Location = new System.Drawing.Point(20, 295);
             this.lblEquilibrio.Name = "lblEquilibrio";
             this.lblEquilibrio.Size = new System.Drawing.Size(172, 16);
             this.lblEquilibrio.TabIndex = 13;
@@ -126,6 +132,7 @@
             0,
             0,
             0});
+            this.numOffertaEsponente.ValueChanged += new System.EventHandler(this.numOffertaEsponente_ValueChanged);
             // 
             // label8
             // 
@@ -164,6 +171,7 @@
             0,
             0,
             131072});
+            this.numOffertaCoeff.ValueChanged += new System.EventHandler(this.numOffertaCoeff_ValueChanged);
             // 
             // label7
             // 
@@ -192,6 +200,7 @@
             0,
             0,
             0});
+            this.numOffertaIntercetta.ValueChanged += new System.EventHandler(this.numOffertaIntercetta_ValueChanged);
             // 
             // label6
             // 
@@ -240,6 +249,7 @@
             0,
             0,
             -2147483648});
+            this.numDomandaCoeff.ValueChanged += new System.EventHandler(this.numDomandaCoeff_ValueChanged);
             // 
             // label4
             // 
@@ -268,6 +278,7 @@
             0,
             0,
             0});
+            this.numDomandaIntercetta.ValueChanged += new System.EventHandler(this.numDomandaIntercetta_ValueChanged);
             // 
             // label3
             // 
@@ -299,6 +310,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "PARAMETRI";
             // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(16, 413);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(20, 394);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 16);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Tabella Dati";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +345,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numOffertaIntercetta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDomandaCoeff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDomandaIntercetta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -338,7 +368,9 @@
         private System.Windows.Forms.NumericUpDown numOffertaEsponente;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown numOffertaCoeff;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_reset;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }
 
